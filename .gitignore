@@ -2,3 +2,6 @@
 demographic.csv
 documentation.pdf
 app_counts.csv
+
+# For EDA/better view
+device_info.csv
