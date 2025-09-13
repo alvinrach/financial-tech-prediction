@@ -50,6 +50,8 @@ We will use area under precision recall curve to gain more insight to the data. 
 
 The AUPRC we get is around 0.31. We choose recall 80% and adjusted the threshold score. Out of 8205 sample, we reject 3965 people to maintain those recall by rejecting people having bad score more than 9.09.
 
+![alt text](image-4.png)
+
 ### Deployment
 
 To be continued.
