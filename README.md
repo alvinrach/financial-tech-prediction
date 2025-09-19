@@ -2,6 +2,11 @@
 
 In this project we will try to predict flag bad based on several features. We will also do lot of feature engineering. 
 
+### Slides
+
+[View Presentation](https://docs.google.com/presentation/d/1bTWVKUndCJmqCgKBjqZI0zwOdDYtS8K9bzRzUUV4K6w/edit?usp=sharing)
+
+
 ### Files
 
 In the project we have 3 main notebook:
