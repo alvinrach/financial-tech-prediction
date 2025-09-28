@@ -108,6 +108,8 @@ The AUPRC we get is around 0.31. We choose recall 80% and adjusted the threshold
 
 ![alt text](image-4.png)
 
+We get 0.3391 for logloss which is good but not excellent and 0.372 for KS which is fair, but almost good.
+
 ### Deployment
 
 To be continued.
