@@ -49,7 +49,46 @@ We try to use xgboost and lightgbm model. After getting the best model, we conti
 
 ### Evaluation
 
+#### AUPRC
+
 We will use area under precision recall curve to gain more insight to the data. After that we will take recall level by asumption and see the precision under threshold we take.
+
+#### KS & Logloss
+
+Besides, in fintech we should also measure KS and logloss.
+
+- KS : Good for ranking e.g. use case when your CA only can asses 100 applicants a day or your sales only can visit 100 house a day. KS is threshold-independent, means its a property of one set of model/tuned.
+
+KS itself is:
+
+$$
+KS = max(tpr-fpr)
+$$
+
+Range [0,1] the bigger the better.
+
+![alt text](image-3.png)
+
+- Logloss : Probabilities is useful for pricing tier. Logloss "evaluates" how much the probabilities is applicable to the pricing tier. Depends on company but in general: Excellent: 0.1 - 0.3 | Good: 0.3 - 0.5 | Okay: 0.5 - 0.7 | Poor: 0.7 - 1.0 | Terrible: 1.0+. Logloss also threshold-independent.
+
+Logloss formula:
+
+$$
+\text{LogLoss} = - \frac{1}{N} \sum_{i=1}^{N} \left[ y_i \cdot \log(p_i) + (1 - y_i) \cdot \log(1 - p_i) \right]
+$$
+
+Don't be hassled:
+
+Let’s say:
+
+| True (y) | Predicted (p) | Calculation  |
+| -------- | ------------- | ------------ |
+| 1        | 0.9           | -log(0.9)    |
+| 1        | 0.1           | -log(0.1)    |
+| 0        | 0.2           | -log(0.8)    |
+| 0        | 0.8           | -log(0.2)    |
+
+So you sum those Calculation and divide by 4 as N we got logloss 1.06. Range [0,∞] the lower the better.
 
 ### Result
 
@@ -60,3 +99,9 @@ The AUPRC we get is around 0.31. We choose recall 80% and adjusted the threshold
 ### Deployment
 
 To be continued.
+
+### Thought/Note
+
+I wonder KS and logloss can be used in stock rebalancing optimization. You have 400 emitents but you can't asses all, you use KS to rank it. Then the probability value will be used to put how much you buy it, but see through logloss to make sure your probability doesn't overconfident.
+
+Next, for door-to-door direct credit card sales promotion, KS is perfect to be used. Your sales maybe can only go 100 houses a day and you must rank/prioritize it.
