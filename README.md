@@ -90,6 +90,18 @@ Let’s say:
 
 So you sum those Calculation and divide by 4 as N we got logloss 1.06. Range [0,∞] the lower the better.
 
+### Shap Values
+
+Shap values are examined to assess:
+1. **Feature Importance**  
+Finance risky, a feature from interpreting user apps has been one of the most important feature. A person that has other loan app is constituting to the prediction result.
+
+2. **Explaining a Bad/Good Person**  
+This is important to explain to the user why their application has not been accepted and what can be improved next. Although not all things will be opened to user to prevent misuse like data falsification.
+
+3. **Nonlinearity & Interaction in Test Data**  
+Sometimes a feature need to be combined and compared with another feature to see the real relationship to the prediction result.
+
 ### Result
 
 The AUPRC we get is around 0.31. We choose recall 80% and adjusted the threshold score. Out of 8205 sample, we reject 4120 people to maintain those recall by rejecting people having bad score more than 8.70.
