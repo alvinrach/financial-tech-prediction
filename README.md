@@ -57,7 +57,7 @@ We will use area under precision recall curve to gain more insight to the data. 
 
 Besides, in fintech we should also measure KS and logloss.
 
-- KS : Good for ranking e.g. use case when your CA only can asses 100 applicants a day or your sales only can visit 100 house a day. KS is threshold-independent, means its a property of one set of model/tuned.
+- KS : Good for ranking e.g. use case when your CA only can asses 100 applicants a day or your sales only can visit 100 house a day. KS is threshold-independent, means its a property of one set of model/tuned. In general: < 0.20 → Poor discriminatory power (model is barely better than random). | 0.20 – 0.40 → Fair model | 0.40 – 0.60 → Good model | > 0.60 Very strong, rarely seen in production credit risk models (often signals overfitting if seen in development).
 
 KS itself is:
 
