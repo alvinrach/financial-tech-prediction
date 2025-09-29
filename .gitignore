@@ -5,3 +5,6 @@ app_counts.csv
 
 # For EDA/better view
 device_info.csv
+mgs_grf/
+experiments/
+saved_experiments_categorial_features/
