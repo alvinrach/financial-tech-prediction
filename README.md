@@ -119,3 +119,5 @@ To be continued.
 I wonder KS and logloss can be used in stock rebalancing optimization. You have 400 emitents but you can't asses all, you use KS to rank it. Then the probability value will be used to put how much you buy it, but see through logloss to make sure your probability doesn't overconfident.
 
 Next, for door-to-door direct credit card sales promotion, KS is perfect to be used. Your sales maybe can only go 100 houses a day and you must rank/prioritize it.
+
+For the oversampling, I found a paper that can be applied but need to be tested more. In 7000 sample data it beats SMOTE. For continuous features, it uses Kernel Density Estimation (KDE) to mimic the real distribution. For categorical features, it uses a Generalized Random Forest (GRF) to generate realistic categories conditioned on the continuous values. See at https://arxiv.org/pdf/2503.22730
